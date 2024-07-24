@@ -31,18 +31,9 @@
         @if (auth()->check())
             <a href="/tasks/create" class="btn btn-outline-primary">Nueva Tarea</a>
         @else
-            <div class="alert alert-warning" role="alert">
-                Solo los usuarios registrados pueden crear una tarea.
-            </div>
         @endif
 
-        @if (!auth()->check())
-            <div class="alert alert-danger" role="alert">
-                Debe iniciar sesión para ver las tareas.
-            </div>
-        @endif
-
-
+     
         <table class="table table-bordered mt-3">
             <thead>
                 <tr>
