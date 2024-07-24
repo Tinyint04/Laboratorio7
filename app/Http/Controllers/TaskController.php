@@ -53,15 +53,13 @@ class TaskController extends Controller
         return view('tasks.show', ['task' => $task]);
     }
 
-    public function edit(Authorize $authorize,Task $task)
+    public function edit(Task $task)
     {
         $users = User::all(); // Obtener todos los usuarios
         $etiquetas = etiqueta::all(); // Obtener todas las etiquetas
 
-        Authorize::authorize('update', $task);
 
-
-        return view('tasks.edit', compact('task', 'etiquetas'));
+        return view('tasks.edit', compact('task', 'etiquetas', 'users'));
     }
 
     public function update(Request $request, Task $task)

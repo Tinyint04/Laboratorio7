@@ -9,7 +9,7 @@
                     <h1>Register</h1>
                 </div>
                 <div class="card-body">
-                    <form action="/register" method="POST">
+                    <form action="/registrar" method="POST">
                         @csrf
 
                         <div class="form-group">
@@ -37,7 +37,7 @@
                             <label for="password_confirmation">Confirm Password</label>
                             <input type="password" class="form-control" name="password_confirmation" id="password_confirmation">
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block mt-3">Register</button>
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Registrar</button>
                         <a href="{{ route('tasks.index') }}" class="btn btn-secondary btn-block mt-3">Regresar</a>
                     </form>
                 </div>

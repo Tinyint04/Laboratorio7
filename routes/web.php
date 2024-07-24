@@ -23,7 +23,7 @@ Route::get('/logout', [SessionController::class, 'destroy'])->name('logout');
 Route::post('/logout', [SessionController::class, 'destroy'])->name('logout');
 
 
-Route::middleware(['auth'])->group(function () {
+/*Route::middleware(['auth'])->group(function () {
     Route::get('/tasks/{id}/edit', [TaskController::class, 'edit'])->name('tasks.edit');
     Route::put('/tasks/{id}', [TaskController::class, 'update'])->name('tasks.update');
-});
+});*/
